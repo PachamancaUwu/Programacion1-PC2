@@ -26,8 +26,8 @@ public class ClienteController : Controller
     }
 
     public IActionResult List(){
-        //var clienteLista = _context.TablaCliente.OrderBy(x => x.Nombre).ToList();
-        return View();
+        var clienteLista = _context.DataCliente.ToList();
+        return View(clienteLista);
     }
 
     [HttpPost] //MÉTODO POST
