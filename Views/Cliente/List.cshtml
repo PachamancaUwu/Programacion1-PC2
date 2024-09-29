@@ -1,0 +1,25 @@
+@model IEnumerable<pc2.Models.Cliente>
+
+<h2>Lista de Clientes</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+			<th>Correo</th>
+            <th>Tipo de Cuenta</th>
+            <th>Saldo Inicial</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.Nombre</td>
+				<td>@cliente.Email</td>
+                <td>@cliente.TipoCuenta</td>
+                <td>@cliente.SaldoInicial</td>         
+            </tr>
+        }
+    </tbody>
+</table>
