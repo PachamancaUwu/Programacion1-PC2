@@ -13,9 +13,9 @@ namespace pc2.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id {   get; set;}
-        public string? Nombre { get; set; }
-        public string? Email { get; set; }
-        public string? TipoCuenta { get; set; }
-        public string? SaldoInicial{ get; set; }
+        public string Nombre { get; set; }
+        public string Email { get; set; }
+        public string TipoCuenta { get; set; }
+        public Decimal SaldoInicial{ get; set; }
     }
 }

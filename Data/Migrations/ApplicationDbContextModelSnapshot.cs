@@ -231,15 +231,18 @@ namespace pc2.Data.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Nombre")
+                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("SaldoInicial")
-                        .HasColumnType("text");
+                    b.Property<decimal>("SaldoInicial")
+                        .HasColumnType("numeric");
 
                     b.Property<string>("TipoCuenta")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
